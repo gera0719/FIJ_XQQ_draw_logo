@@ -1,0 +1,155 @@
+[0.000000] (-) TimerEvent: {}
+[0.000713] (nov_fij_draw_logo) JobQueued: {'identifier': 'nov_fij_draw_logo', 'dependencies': OrderedDict()}
+[0.000786] (nov_fij_draw_logo) JobStarted: {'identifier': 'nov_fij_draw_logo'}
+[0.007507] (nov_fij_draw_logo) JobProgress: {'identifier': 'nov_fij_draw_logo', 'progress': 'cmake'}
+[0.007879] (nov_fij_draw_logo) Command: {'cmd': ['/usr/bin/cmake', '/home/ajr/ros2_ws/src/nov_fij_draw_logo', '-DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/nov_fij_draw_logo/install/nov_fij_draw_logo'], 'cwd': '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{3ad42e7b-e073-5f3e-ac57-1c259ffa86a8}'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'ajr1'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'GERA'), ('WSL_INTEROP', '/run/WSL/9916_interop'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/g/Programming/CPP/Compiler/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/g/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/gergo/AppData/Local/Microsoft/WindowsApps:/mnt/g/Microsoft VS Code/bin:/mnt/g/CLion 2023.3.3/bin:/mnt/g/WebStorm 2024.1.3/bin:/snap/bin'), ('WT_SESSION', '4ebac68b-2492-45db-aba0-20be5531296b'), ('DISPLAY', '172.27.48.1:0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '52'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/simple_sub_cpp:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/orai_feladat:/home/ajr/ros2_ws/install/nov_fij_draw_logo:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/simple_sub_cpp:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/orai_feladat:/home/ajr/ros2_ws/install/nov_fij_draw_logo:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.099749] (-) TimerEvent: {}
+[0.161349] (nov_fij_draw_logo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199880] (-) TimerEvent: {}
+[0.300267] (-) TimerEvent: {}
+[0.400597] (-) TimerEvent: {}
+[0.500968] (-) TimerEvent: {}
+[0.601337] (-) TimerEvent: {}
+[0.701666] (-) TimerEvent: {}
+[0.801999] (-) TimerEvent: {}
+[0.864783] (nov_fij_draw_logo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.902161] (-) TimerEvent: {}
+[1.002525] (-) TimerEvent: {}
+[1.102884] (-) TimerEvent: {}
+[1.203236] (-) TimerEvent: {}
+[1.303592] (-) TimerEvent: {}
+[1.403977] (-) TimerEvent: {}
+[1.434657] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.504140] (-) TimerEvent: {}
+[1.589688] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.594623] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.594857] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.595098] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.596943] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.604276] (-) TimerEvent: {}
+[1.704636] (-) TimerEvent: {}
+[1.758324] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.763268] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.763604] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.763713] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.765368] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.804774] (-) TimerEvent: {}
+[1.856987] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.905228] (-) TimerEvent: {}
+[1.914584] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.005403] (-) TimerEvent: {}
+[2.090917] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.094599] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.100449] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.105756] (-) TimerEvent: {}
+[2.108238] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.119282] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.148781] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.150732] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.205945] (-) TimerEvent: {}
+[2.306328] (-) TimerEvent: {}
+[2.406685] (-) TimerEvent: {}
+[2.507103] (-) TimerEvent: {}
+[2.607479] (-) TimerEvent: {}
+[2.707820] (-) TimerEvent: {}
+[2.808201] (-) TimerEvent: {}
+[2.908549] (-) TimerEvent: {}
+[3.008904] (-) TimerEvent: {}
+[3.109243] (-) TimerEvent: {}
+[3.209642] (-) TimerEvent: {}
+[3.310028] (-) TimerEvent: {}
+[3.410608] (-) TimerEvent: {}
+[3.510994] (-) TimerEvent: {}
+[3.611392] (-) TimerEvent: {}
+[3.711742] (-) TimerEvent: {}
+[3.812099] (-) TimerEvent: {}
+[3.912443] (-) TimerEvent: {}
+[4.012804] (-) TimerEvent: {}
+[4.045231] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.112983] (-) TimerEvent: {}
+[4.213357] (-) TimerEvent: {}
+[4.313688] (-) TimerEvent: {}
+[4.414025] (-) TimerEvent: {}
+[4.514395] (-) TimerEvent: {}
+[4.614750] (-) TimerEvent: {}
+[4.715117] (-) TimerEvent: {}
+[4.815498] (-) TimerEvent: {}
+[4.915857] (-) TimerEvent: {}
+[5.016216] (-) TimerEvent: {}
+[5.116563] (-) TimerEvent: {}
+[5.216929] (-) TimerEvent: {}
+[5.317310] (-) TimerEvent: {}
+[5.417656] (-) TimerEvent: {}
+[5.518021] (-) TimerEvent: {}
+[5.618358] (-) TimerEvent: {}
+[5.718699] (-) TimerEvent: {}
+[5.819036] (-) TimerEvent: {}
+[5.919366] (-) TimerEvent: {}
+[6.019744] (-) TimerEvent: {}
+[6.074728] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[6.119905] (-) TimerEvent: {}
+[6.220628] (-) TimerEvent: {}
+[6.321079] (-) TimerEvent: {}
+[6.421429] (-) TimerEvent: {}
+[6.521791] (-) TimerEvent: {}
+[6.622160] (-) TimerEvent: {}
+[6.722490] (-) TimerEvent: {}
+[6.822832] (-) TimerEvent: {}
+[6.923160] (-) TimerEvent: {}
+[7.023501] (-) TimerEvent: {}
+[7.123842] (-) TimerEvent: {}
+[7.224211] (-) TimerEvent: {}
+[7.324549] (-) TimerEvent: {}
+[7.424955] (-) TimerEvent: {}
+[7.525325] (-) TimerEvent: {}
+[7.625673] (-) TimerEvent: {}
+[7.726012] (-) TimerEvent: {}
+[7.826350] (-) TimerEvent: {}
+[7.926691] (-) TimerEvent: {}
+[8.027075] (-) TimerEvent: {}
+[8.127423] (-) TimerEvent: {}
+[8.227756] (-) TimerEvent: {}
+[8.328098] (-) TimerEvent: {}
+[8.428454] (-) TimerEvent: {}
+[8.528804] (-) TimerEvent: {}
+[8.629154] (-) TimerEvent: {}
+[8.729527] (-) TimerEvent: {}
+[8.829864] (-) TimerEvent: {}
+[8.930223] (-) TimerEvent: {}
+[9.030630] (-) TimerEvent: {}
+[9.131023] (-) TimerEvent: {}
+[9.231448] (-) TimerEvent: {}
+[9.331789] (-) TimerEvent: {}
+[9.432152] (-) TimerEvent: {}
+[9.532551] (-) TimerEvent: {}
+[9.632883] (-) TimerEvent: {}
+[9.692906] (nov_fij_draw_logo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[9.698759] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[9.733050] (-) TimerEvent: {}
+[9.833444] (-) TimerEvent: {}
+[9.862333] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[9.862603] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[9.933578] (-) TimerEvent: {}
+[10.021728] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[10.022517] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[10.033697] (-) TimerEvent: {}
+[10.056657] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[10.105024] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Configuring done\n'}
+[10.110878] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Generating done\n'}
+[10.112036] (nov_fij_draw_logo) StdoutLine: {'line': b'-- Build files have been written to: /home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo\n'}
+[10.118802] (nov_fij_draw_logo) CommandEnded: {'returncode': 0}
+[10.120691] (nov_fij_draw_logo) JobProgress: {'identifier': 'nov_fij_draw_logo', 'progress': 'build'}
+[10.120741] (nov_fij_draw_logo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo', '--', '-j12', '-l12'], 'cwd': '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ajr'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/home/ajr/ros2_ws/install/pid_library/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{3ad42e7b-e073-5f3e-ac57-1c259ffa86a8}'), ('HOME', '/home/ajr'), ('OLDPWD', '/home/ajr/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'ajr1'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/ajr/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ajr'), ('NAME', 'GERA'), ('WSL_INTEROP', '/run/WSL/9916_interop'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/ajr/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/g/Programming/CPP/Compiler/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/g/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/gergo/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/gergo/AppData/Local/Microsoft/WindowsApps:/mnt/g/Microsoft VS Code/bin:/mnt/g/CLion 2023.3.3/bin:/mnt/g/WebStorm 2024.1.3/bin:/snap/bin'), ('WT_SESSION', '4ebac68b-2492-45db-aba0-20be5531296b'), ('DISPLAY', '172.27.48.1:0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '52'), ('AMENT_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/simple_sub_cpp:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/orai_feladat:/home/ajr/ros2_ws/install/nov_fij_draw_logo:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_py:/home/ajr/ros2_ws/install/arj_intro_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ajr/ros2_ws/install/arj_transforms_py/lib/python3.10/site-packages:/home/ajr/ros2_ws/install/arj_intro_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/ajr/ros2_ws/install/sim_wayp_plan_tools:/home/ajr/ros2_ws/install/wayp_plan_tools:/home/ajr/ros2_ws/install/use_library:/home/ajr/ros2_ws/install/speed_control_loop:/home/ajr/ros2_ws/install/simple_sub_cpp:/home/ajr/ros2_ws/install/pid_library:/home/ajr/ros2_ws/install/orai_feladat:/home/ajr/ros2_ws/install/nov_fij_draw_logo:/home/ajr/ros2_ws/install/example_system:/home/ajr/ros2_ws/install/arj_transforms_cpp:/home/ajr/ros2_ws/install/arj_simple_perception:/home/ajr/ros2_ws/install/arj_local_planner:/home/ajr/ros2_ws/install/arj_intro_cpp:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[10.133859] (-) TimerEvent: {}
+[10.147760] (nov_fij_draw_logo) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/logo_turtlesim.dir/src/logo_turtlesim.cpp.o\x1b[0m\n'}
+[10.234478] (-) TimerEvent: {}
+[10.251792] (nov_fij_draw_logo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ajr/ros2_ws/src/nov_fij_draw_logo/src/logo_turtlesim.cpp:2:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kgeometry_msgs/twist.hpp: No such file or directory\n'}
+[10.252036] (nov_fij_draw_logo) StderrLine: {'line': b'    2 | #include \x1b[01;31m\x1b[K"geometry_msgs/twist.hpp"\x1b[m\x1b[K\n'}
+[10.252158] (nov_fij_draw_logo) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.252246] (nov_fij_draw_logo) StderrLine: {'line': b'compilation terminated.\n'}
+[10.253993] (nov_fij_draw_logo) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/logo_turtlesim.dir/build.make:76: CMakeFiles/logo_turtlesim.dir/src/logo_turtlesim.cpp.o] Error 1\n'}
+[10.254180] (nov_fij_draw_logo) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/logo_turtlesim.dir/all] Error 2\n'}
+[10.254341] (nov_fij_draw_logo) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[10.257400] (nov_fij_draw_logo) CommandEnded: {'returncode': 2}
+[10.275140] (nov_fij_draw_logo) JobEnded: {'identifier': 'nov_fij_draw_logo', 'rc': 2}
+[10.285869] (-) EventReactorShutdown: {}

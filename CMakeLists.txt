@@ -20,15 +20,15 @@ set(ament_dependencies
   std_msgs
   geometry_msgs
 )
-
-# add_executable(simple_sub_node src/print_pose.cpp)
+include_directories(include)
+add_executable(logo_turtlesim src/logo_turtlesim.cpp)
+ament_target_dependencies(logo_turtlesim rclcpp geometry_msgs)
 # ament_target_dependencies(simple_sub_node ${ament_dependencies} )
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
 
-install(TARGETS
-# simple_sub_node
-DESTINATION lib/${PROJECT_NAME})
+
+install(TARGETS logo_turtlesim.cpp DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

@@ -1,0 +1,46 @@
+[0.010s] Invoking command in '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake /home/ajr/ros2_ws/src/nov_fij_draw_logo -DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/nov_fij_draw_logo/install/nov_fij_draw_logo
+[0.160s] -- The C compiler identification is GNU 11.4.0
+[0.864s] -- The CXX compiler identification is GNU 11.4.0
+[1.434s] -- Detecting C compiler ABI info
+[1.589s] -- Detecting C compiler ABI info - done
+[1.594s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.594s] -- Detecting C compile features
+[1.594s] -- Detecting C compile features - done
+[1.596s] -- Detecting CXX compiler ABI info
+[1.757s] -- Detecting CXX compiler ABI info - done
+[1.762s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.763s] -- Detecting CXX compile features
+[1.763s] -- Detecting CXX compile features - done
+[1.764s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.856s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.914s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[2.090s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.094s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.099s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.107s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.118s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.148s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.150s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.044s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[6.074s] -- Found FastRTPS: /opt/ros/humble/include  
+[9.692s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.698s] -- Looking for pthread.h
+[9.861s] -- Looking for pthread.h - found
+[9.862s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[10.021s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[10.021s] -- Found Threads: TRUE  
+[10.056s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[10.104s] -- Configuring done
+[10.110s] -- Generating done
+[10.111s] -- Build files have been written to: /home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo
+[10.119s] Invoked command in '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake /home/ajr/ros2_ws/src/nov_fij_draw_logo -DCMAKE_INSTALL_PREFIX=/home/ajr/ros2_ws/src/nov_fij_draw_logo/install/nov_fij_draw_logo
+[10.120s] Invoking command in '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo -- -j12 -l12
+[10.147s] [ 50%] [32mBuilding CXX object CMakeFiles/logo_turtlesim.dir/src/logo_turtlesim.cpp.o[0m
+[10.251s] [01m[K/home/ajr/ros2_ws/src/nov_fij_draw_logo/src/logo_turtlesim.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/twist.hpp: No such file or directory
+[10.251s]     2 | #include [01;31m[K"geometry_msgs/twist.hpp"[m[K
+[10.251s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.251s] compilation terminated.
+[10.253s] gmake[2]: *** [CMakeFiles/logo_turtlesim.dir/build.make:76: CMakeFiles/logo_turtlesim.dir/src/logo_turtlesim.cpp.o] Error 1
+[10.253s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/logo_turtlesim.dir/all] Error 2
+[10.253s] gmake: *** [Makefile:146: all] Error 2
+[10.256s] Invoked command in '/home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ajr/ros2_ws/install/arj_transforms_py:/home/ajr/ros2_ws/install/arj_intro_py:/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/nov_fij_draw_logo/build/nov_fij_draw_logo -- -j12 -l12
