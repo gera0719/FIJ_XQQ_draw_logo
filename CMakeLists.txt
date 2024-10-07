@@ -21,12 +21,12 @@ set(ament_dependencies
   geometry_msgs
 )
 include_directories(include)
-add_executable(test src/test_node.cpp)
-ament_target_dependencies(test rclcpp geometry_msgs)
+add_executable(test_node src/test_node.cpp)
+ament_target_dependencies(test_node rclcpp geometry_msgs)
 
 
 install(TARGETS 
-  test
+  test_node
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
