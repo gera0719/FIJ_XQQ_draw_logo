@@ -1,3 +1,6 @@
+source;share/nov_fij_draw_logo/hook/cmake_prefix_path.ps1
+source;share/nov_fij_draw_logo/hook/cmake_prefix_path.dsv
+source;share/nov_fij_draw_logo/hook/cmake_prefix_path.sh
 source;share/nov_fij_draw_logo/local_setup.bash
 source;share/nov_fij_draw_logo/local_setup.dsv
 source;share/nov_fij_draw_logo/local_setup.ps1

@@ -1,7 +1,0 @@
-[01m[K/home/ajr/ros2_ws/src/nov_fij_draw_logo/src/logo_turtlesim.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/twist.hpp: No such file or directory
-    2 | #include [01;31m[K"geometry_msgs/twist.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/logo_turtlesim.dir/build.make:76: CMakeFiles/logo_turtlesim.dir/src/logo_turtlesim.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/logo_turtlesim.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

@@ -12,72 +12,57 @@ def extractSvgPaths(filePath):
     allPathsData = [path.get('d') for path in pathElements if path.get('d')]
     return allPathsData
 
-#
-#extracting paths one-by-one from the allPathsData list
-def extractCoordinates(pathData):
-    points = []
+
+
+
+
+def svg_path_to_turtlesim(svg_path):
+    commands = []
+    x, y = 0, 0  # Starting position
+    angle = 0    # Starting angle
+
+    # Split the SVG path into commands
+    path_commands = svg_path.replace(',', ' ').split()
+    
     i = 0
-    while i < len(pathData):
-        if pathData[i] in 'ML':  
-            i += 1
-            x, y = '', ''
-            while pathData[i] != ',':
-                x += pathData[i]
-                i += 1
-            i += 1  
-            while i < len(pathData) and pathData[i] not in [' ', 'M', 'L', 'C']:
-                y += pathData[i]
-                i += 1
-            points.append((float(x), float(y)))
-        elif pathData[i] == 'C':  
-            i += 1
-            controlPoints = []
-            for _ in range(3):
-                x, y = '', ''
-                while pathData[i] != ',':
-                    x += pathData[i]
-                    i += 1
-                i += 1  # Skip comma
-                while i < len(pathData) and pathData[i] not in [' ', 'M', 'L', 'C']:
-                    y += pathData[i]
-                    i += 1
-                controlPoints.append((float(x), float(y)))
-            p0 = points[-1]  
-            points.extend(cubicBezierCurve(p0, controlPoints))
-        i += 1
-    return points
-#turtlesim cannot handle bezier curves, so we need to convert them to line segments
-def cubicBezierCurve(p0, controlPoints, numSteps=100):
-    p1, p2, p3 = controlPoints
-    points = []
-    for i in range(numSteps + 1):
-        t = i / numSteps
-        x = (1 - t)**3 * p0[0] + 3 * (1 - t)**2 * t * p1[0] + 3 * (1 - t) * t**2 * p2[0] + t**3 * p3[0]
-        y = (1 - t)**3 * p0[1] + 3 * (1 - t)**2 * t * p1[1] + 3 * (1 - t) * t**2 * p2[1] + t**3 * p3[1]
-        points.append((x, y))
-    return points
+    while i < len(path_commands):
+        command = path_commands[i]
+        
+        if command == 'M' or command == 'm':
+            # Move to absolute or relative coordinates
+            dx = float(path_commands[i + 1])
+            dy = float(path_commands[i + 2])
+            if command == 'm':  # Relative move
+                dx += x
+                dy += y
+            x, y = dx, dy
+            commands.append(f"forward {math.hypot(dx, dy)}")  # Move forward
+            angle = math.degrees(math.atan2(dy - y, dx - x))  # Calculate angle
+            commands.append(f"setheading {angle}")  # Set heading
+            i += 3
+            
+        elif command == 'L' or command == 'l':
+            # Line to absolute or relative coordinates
+            dx = float(path_commands[i + 1])
+            dy = float(path_commands[i + 2])
+            if command == 'l':  # Relative line
+                dx += x
+                dy += y
+            distance = math.hypot(dx - x, dy - y)
+            commands.append(f"forward {distance}")  # Move forward
+            angle = math.degrees(math.atan2(dy - y, dx - x))  # Calculate angle
+            commands.append(f"setheading {angle}")  # Set heading
+            x, y = dx, dy  # Update current position
+            i += 3
+            
+        # Handle additional SVG commands (like C, Q, etc.) here
+        
+        else:
+            i += 1  # Skip unknown commands
+
+    return commands
 
 
-
-#turtlesim canvas is 11x11, so we need to scale the coordinates to fit the canvas
-def convertCoordinates(coordinates, canvasSize=11):
-    minX = min(coord[0] for coord in coordinates)
-    minY = min(coord[1] for coord in coordinates)
-    maxX = max(coord[0] for coord in coordinates)
-    maxY = max(coord[1] for coord in coordinates)
-    scale = min(canvasSize / (maxX - minX), canvasSize / (maxY - minY))
-    return [( (x - minX) * scale, (y - minY) * scale) for x, y in coordinates]
-
-
-#convert the coordinates to the format that turtlesim understands
-def convertCrdToTurtlesimCrd(coordinates):
-    movements = []
-    for i in range(len(coordinates) - 1):
-        p1, p2 = coordinates[i], coordinates[i + 1]
-        distance = math.sqrt((p2[0] - p1[0])**2 + (p2[1] - p1[1])**2)
-        angle = math.atan2(p2[1] - p1[1], p2[0] - p1[0])
-        movements.append((distance, angle))
-    return movements
 
 
 
@@ -86,15 +71,17 @@ svgFilePath = 'img/sze1px10x10px.svg'
 
 pathDataList = extractSvgPaths(svgFilePath)
 
-allCoordinates = []
+allPaths = []
 #printing the paths to check if the extraction was successful
 for pathData in pathDataList:
     #print("Path: ", pathData)
-    coordinates = extractCoordinates(pathData)
-    allCoordinates.extend(coordinates)
+    allPaths.append(svg_path_to_turtlesim(pathData))
 
-convertedCoordinates = convertCoordinates(allCoordinates)
-#print("Coordinates: ", convertedCoordinates)
-
-turtlesimCoordinates = convertCrdToTurtlesimCrd(convertedCoordinates)
-print("Turtlesim Coordinates: ", turtlesimCoordinates)
+print(allPaths)
+# # i have the above code, now i'm going to list the functions i'll need:
+# # - most important thing is that the paths must stay in a list, one path is one element, so if you do any modifications, please keep that in mind
+# # - the paths are already extracted from the svg file, so you don't need to worry about that
+# # - i need you to go through the paths and do the following things:
+# # - convert each path to a format that turtlesim can understand (it's important that svg uses uppercase letters for absolute coordinates and lowercase letters for relative coordinates)
+# # - turtlesim uses a canvas that is 11x11, so you need to scale the paths to fit that canvas
+# # - you need to handle bezier curves too, so you need to convert them to lines, but in a way that the path still looks like the original

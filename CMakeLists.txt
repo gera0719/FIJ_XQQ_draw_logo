@@ -21,14 +21,12 @@ set(ament_dependencies
   geometry_msgs
 )
 include_directories(include)
-add_executable(logo_turtlesim src/logo_turtlesim.cpp)
-ament_target_dependencies(logo_turtlesim rclcpp geometry_msgs)
-# ament_target_dependencies(simple_sub_node ${ament_dependencies} )
-
-install(DIRECTORY launch
-  DESTINATION share/${PROJECT_NAME})
+add_executable(faszbaszas src/faszbaszas.cpp)
+ament_target_dependencies(faszbaszas rclcpp geometry_msgs)
 
 
-install(TARGETS logo_turtlesim.cpp DESTINATION lib/${PROJECT_NAME})
+install(TARGETS 
+  faszbaszas
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

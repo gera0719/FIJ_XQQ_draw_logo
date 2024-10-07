@@ -1,0 +1,23 @@
+[0.013s] Invoking command in '/home/ajr/ros2_ws/src/build/nov_fij_draw_logo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/build/nov_fij_draw_logo -- -j12 -l12
+[0.045s] Invoked command in '/home/ajr/ros2_ws/src/build/nov_fij_draw_logo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ajr/ros2_ws/src/build/nov_fij_draw_logo -- -j12 -l12
+[0.071s] Invoking command in '/home/ajr/ros2_ws/src/build/nov_fij_draw_logo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/build/nov_fij_draw_logo
+[0.077s] -- Install configuration: ""
+[0.077s] -- Execute custom install script
+[0.077s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/launch/launch_example1.launch.py
+[0.078s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/launch/launch_example2.launch.py
+[0.078s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/ament_index/resource_index/package_run_dependencies/nov_fij_draw_logo
+[0.078s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/ament_index/resource_index/parent_prefix_path/nov_fij_draw_logo
+[0.078s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/environment/ament_prefix_path.sh
+[0.079s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/environment/ament_prefix_path.dsv
+[0.079s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/environment/path.sh
+[0.079s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/environment/path.dsv
+[0.079s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/local_setup.bash
+[0.080s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/local_setup.sh
+[0.080s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/local_setup.zsh
+[0.080s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/local_setup.dsv
+[0.080s] -- Symlinking: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/package.dsv
+[0.087s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/ament_index/resource_index/packages/nov_fij_draw_logo
+[0.088s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/cmake/nov_fij_draw_logoConfig.cmake
+[0.088s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/cmake/nov_fij_draw_logoConfig-version.cmake
+[0.088s] -- Up-to-date symlink: /home/ajr/ros2_ws/src/install/nov_fij_draw_logo/share/nov_fij_draw_logo/package.xml
+[0.090s] Invoked command in '/home/ajr/ros2_ws/src/build/nov_fij_draw_logo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ajr/ros2_ws/src/build/nov_fij_draw_logo
