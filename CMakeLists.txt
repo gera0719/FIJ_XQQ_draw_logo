@@ -21,12 +21,12 @@ set(ament_dependencies
   geometry_msgs
 )
 include_directories(include)
-add_executable(faszbaszas src/faszbaszas.cpp)
-ament_target_dependencies(faszbaszas rclcpp geometry_msgs)
+add_executable(test src/test_node.cpp)
+ament_target_dependencies(test rclcpp geometry_msgs)
 
 
 install(TARGETS 
-  faszbaszas
+  test
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

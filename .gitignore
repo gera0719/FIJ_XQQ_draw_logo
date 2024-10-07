@@ -53,3 +53,9 @@ CATKIN_IGNORE
 
 # vscode
 .vscode/
+
+#log
+log/
+
+#install
+install/
