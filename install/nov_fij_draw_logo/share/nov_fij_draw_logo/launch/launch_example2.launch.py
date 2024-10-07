@@ -1,1 +1,0 @@
-/home/ajr/ros2_ws/src/nov_fij_draw_logo/launch/launch_example2.launch.py
