@@ -11,7 +11,10 @@ class DrawLogo : public rclcpp::Node{
 
     rclcpp::Client<turtlesim::srv::SetPen>::SharedPtr pen_on_off_c;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr velocity_pub;
-    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr timer;
+    std::vector<std::pair<double, double>> vectors;
+    
+    
 
     
 
@@ -74,8 +77,34 @@ class DrawLogo : public rclcpp::Node{
         velocity_pub = this->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 10);
         pen_on_off_c = this->create_client<turtlesim::srv::SetPen>("turtle1/set_pen");
 
+
+        //the easiest way to control the turtle will be, if we'd stored the vectors of the movement in a vector
+        
+        vectors = {
+            //lines -> {linear.x, linear.y}
+            /*teleport to starting point (-4.0, -3.0) */{5.7, 0.0},
+            /*teleport to (-2.5, -2.25)*/{4.2, 0.0},
+            /*teleport to (-4.0, -1.5)*/{5.7, 0.0},
+            //lower three long lines done
+            /*teleport to (2.5, -3.0)*/{1.5, 0.0},
+            /*teleport to (2.5, -2.25)*/{1.5, 0.0},
+            /*teleport to (2.5, -1.5)*/{1.5, 0.0},
+            /*teleport to (2.5, -0.75)*/{1.5, 0.0},
+            /*teleport to (2.5, 0.0)*/{1.5, 0.0},
+            /*teleport to (2.5, 0.75)*/{1.5, 0.0},
+            /*teleport to (2.5, 1.5)*/{1.5, 0.0},
+            /*teleport to (2.5, 2.25)*/{1.5, 0.0},
+            /*teleport to (2.5, 3.0)*/{1.5, 0.0},
+            //*9 short lines done
+            //curves -> {linear.x, angular.z}
+            /*teleport to (-2.5, -0.75)*/{5.6569, 0},
+            /*teleport to (-2.5, 0.0)*/{4.5962, 0}
+
+        };
+
+
         // cooldown after init
-        timer_ = this->create_wall_timer(
+        timer = this->create_wall_timer(
             std::chrono::seconds(1), std::bind(&DrawLogo::control_turtle, this));
 
     };
