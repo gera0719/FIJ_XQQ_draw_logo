@@ -13,6 +13,7 @@ class DrawLogo : public rclcpp::Node{
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr velocity_pub;
     rclcpp::TimerBase::SharedPtr timer;
     std::vector<std::pair<double, double>> vectors;
+    std::vector<std::pair<double, double>> coordinates_t;
     
     
 
@@ -80,6 +81,7 @@ class DrawLogo : public rclcpp::Node{
 
         //the easiest way to control the turtle will be, if we'd stored the vectors of the movement in a vector
         
+
         vectors = {
             //lines -> {linear.x, linear.y}
             /*teleport to starting point (-4.0, -3.0) */{5.7, 0.0},
@@ -99,6 +101,26 @@ class DrawLogo : public rclcpp::Node{
             //curves -> {linear.x, angular.z}
             /*teleport to (-2.5, -0.75)*/{5.6569, 0},
             /*teleport to (-2.5, 0.0)*/{4.5962, 0}
+
+        };
+        //storing the coordinates for teleporting in a vector
+        coordinates_t = {
+            {-4.0, -3.0},
+            {-2.5, -2.25},
+            {-4.0, -1.5},
+
+            {2.5, -3.0},
+            {2.5, -2.25},
+            {2.5, -1.5},
+            {2.5, -0.75},
+            {2.5, 0.0},
+            {2.5, 0.75},
+            {2.5, 1.5},
+            {2.5, 2.25},
+            {2.5, 3.0},
+
+            {-2.5, -0.75},
+            {-2.5, 0.0}
 
         };
 
