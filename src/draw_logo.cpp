@@ -14,7 +14,7 @@ class DrawLogo : public rclcpp::Node{
     rclcpp::TimerBase::SharedPtr timer;
     std::vector<std::pair<double, double>> vectors;
     std::vector<std::pair<double, double>> coordinates_t;
-    rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedPtr teleport_client_;
+    rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedPtr teleport_c;
     
 
     
@@ -31,7 +31,19 @@ class DrawLogo : public rclcpp::Node{
             RCLCPP_INFO(this->get_logger(), "pen setting has been changed");
         });
     }
-
+    void teleport(double x, double y){
+        pen_on_off(false);
+        auto teleport = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
+        teleport->x = 1.0; 
+        teleport->y = 1.0;
+        teleport->theta = 0.0;
+        teleport_c->async_send_request(teleport, [this](rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedFuture)
+        {
+            RCLCPP_INFO(this->get_logger(), "teleportation has been completed");
+            pen_on_off(true);
+        });
+    }
+    
     void move_turtle(double distance, double speed = 1.0){
         geometry_msgs::msg::Twist msg;
         msg.linear.x = speed;
@@ -70,20 +82,20 @@ class DrawLogo : public rclcpp::Node{
         RCLCPP_INFO(this->get_logger(), "0.3 left, pen on");
         move_turtle(0.3);
     }
-
+    
     public:
 
     DrawLogo() : Node("draw_logo"){
         
         velocity_pub = this->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 10);
         pen_on_off_c = this->create_client<turtlesim::srv::SetPen>("turtle1/set_pen");
-        teleport_client_ = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
+        teleport_c = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
 
         //the easiest way to control the turtle will be, if we'd stored the vectors of the movement in a vector
         
 
         vectors = {
-            //lines -> {linear.x, linear.y}
+            //lines -> {x, y of vector}
             /*teleport to starting point (-4.0, -3.0) */{5.7, 0.0},
             /*teleport to (-2.5, -2.25)*/{4.2, 0.0},
             /*teleport to (-4.0, -1.5)*/{5.7, 0.0},
@@ -98,8 +110,8 @@ class DrawLogo : public rclcpp::Node{
             /*teleport to (2.5, 2.25)*/{1.5, 0.0},
             /*teleport to (2.5, 3.0)*/{1.5, 0.0},
             //*9 short lines done
-            //curves -> {linear.x, angular.z}
-            /*teleport to (-2.5, -0.75)*/{5.6569, 0/*i don't know that yet :C*/},
+
+            /*teleport to (-2.5, -0.75)*/{5.6569, 0,/*i don't know that yet :C*/},
             /*teleport to (-2.5, 0.0)*/{4.5962, 0}
 
         };
