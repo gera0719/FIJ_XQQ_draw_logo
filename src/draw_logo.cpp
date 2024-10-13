@@ -2,6 +2,7 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "turtlesim/srv/set_pen.hpp"
 #include "turtlesim/srv/teleport_absolute.hpp"
+#include "turtlesim/srv/kill.hpp"
 #include <chrono>
 #include <cmath>
 
@@ -17,6 +18,7 @@ class DrawLogo : public rclcpp::Node{
     std::vector<std::pair<double, double>> coordinates_t;
     rclcpp::Client<turtlesim::srv::TeleportAbsolute>::SharedPtr teleport_c;
     size_t current_move;
+    rclcpp::Client<turtlesim::srv::Kill>::SharedPtr kill_c;
     
 
     void pen_on_off(bool on){
@@ -89,8 +91,21 @@ class DrawLogo : public rclcpp::Node{
             move_turtle_curve(vectors[current_move].first, vectors[current_move].second, 1.0);
             current_move++;
         }
+        else{
+            //kill the turtle
+            auto kill = std::make_shared<turtlesim::srv::Kill::Request>();
+            kill->name = "turtle1";
+            kill_c->async_send_request(kill, [this](rclcpp::Client<turtlesim::srv::Kill>::SharedFuture)
+            {
+                RCLCPP_INFO(this->get_logger(), "turtle has been killed");
+            });
+            rclcpp::sleep_for(std::chrono::milliseconds(500));
+            rclcpp::shutdown();
+            timer->cancel();
+        }
         std::cout << "current move: " << current_move << std::endl;
     }
+
     public:
 
     DrawLogo() : Node("draw_logo"), current_move(0){
@@ -98,7 +113,8 @@ class DrawLogo : public rclcpp::Node{
         velocity_pub = this->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 10);
         pen_on_off_c = this->create_client<turtlesim::srv::SetPen>("turtle1/set_pen");
         teleport_c = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
-    
+        kill_c = this->create_client<turtlesim::srv::Kill>("/kill");
+
         vectors = {
             //lines -> {x, y of vector}
             {5.7, 0.0},
@@ -121,20 +137,20 @@ class DrawLogo : public rclcpp::Node{
         };
         //teleport coords
         coordinates_t = {
-            {1.0, 2.0},
-            {2.5, 2.75},
-            {1.0, 3.5},
-            {7.5, 2.0},
-            {7.5, 2.75},
-            {7.5, 3.5},
-            {7.5, 4.25},
-            {7.5, 5.0},
-            {7.5, 5.75},
-            {7.5, 6.5},
-            {7.5, 7.25},
-            {7.5, 8.0},
-            {2.5, 4.25},
-            {2.5, 5.0}
+            {1.0, 3.0},
+            {2.5, 3.75},
+            {1.0, 4.5},
+            {7.5, 3.0},
+            {7.5, 3.75},
+            {7.5, 4.5},
+            {7.5, 5.25},
+            {7.5, 6.0},
+            {7.5, 6.75},
+            {7.5, 7.5},
+            {7.5, 8.25},
+            {7.5, 9.0},
+            {2.5, 5.25},
+            {2.5, 6.0}
         };
         //continuous impulse
         timer = this->create_wall_timer(
