@@ -58,19 +58,39 @@ class DrawLogo : public rclcpp::Node{
         velocity_pub->publish(msg);
     }
 
+    void move_turtle_curve(double distance, double angular, double speed = 1.0){
+        geometry_msgs::msg::Twist msg;
+        msg.linear.x = speed;
+        msg.angular.z = angular;
+        rclcpp::Time start_time = this->now();
+        double duration = distance / std::abs(speed);
+        while ((this->now() - start_time).seconds() < duration) {
+            velocity_pub->publish(msg);
+            rclcpp::sleep_for(std::chrono::milliseconds(100));
+        }
+        
+        msg.linear.x = 0.0;
+        msg.angular.z = 0.0;
+        velocity_pub->publish(msg);
+    }
+
+
     void control_turtle(){
-        if(current_move < coordinates_t.size()){
+        if(current_move < coordinates_t.size()-2){
             pen_on_off(false);
             teleport(coordinates_t[current_move].first, coordinates_t[current_move].second);
             pen_on_off(true);
             move_turtle(vectors[current_move].first, 1.0);
             current_move++;
-            std::cout << "move: " << current_move << " of " << vectors.size() << std::endl;
-        }else{
-            rclcpp::shutdown();
+        }else if (current_move >= coordinates_t.size()-3 && current_move < coordinates_t.size()){
+            pen_on_off(false);
+            teleport(coordinates_t[current_move].first, coordinates_t[current_move].second);
+            pen_on_off(true);
+            move_turtle_curve(vectors[current_move].first, vectors[current_move].second, 1.0);
+            current_move++;
         }
+        std::cout << "current move: " << current_move << std::endl;
     }
-
     public:
 
     DrawLogo() : Node("draw_logo"), current_move(0){
@@ -95,8 +115,9 @@ class DrawLogo : public rclcpp::Node{
             {1.5, 0.0},
             {1.5, 0.0},
             //*9 short lines done
-
-            //only the curves are left to do
+            {6.2, M_PI_2/6.72},
+            {5.1, M_PI_2/5.59}
+            //curves done
         };
         //teleport coords
         coordinates_t = {
@@ -112,9 +133,10 @@ class DrawLogo : public rclcpp::Node{
             {7.5, 6.5},
             {7.5, 7.25},
             {7.5, 8.0},
-            //only the curves are left to do
+            {2.5, 4.25},
+            {2.5, 5.0}
         };
-        //continus impulse
+        //continuous impulse
         timer = this->create_wall_timer(
             1.25s, std::bind(&DrawLogo::control_turtle, this));
     };
