@@ -40,7 +40,7 @@ ros2 launch nov_fij_draw_logo logo_launch.py
 #### or
 
 ``` r
-ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtlesim_node --ros-args -p background_r:=255 -p background_g:=255 -p background_b:=255
 ```
 ``` r
 ros2 run nov_fij_draw_logo draw_logo
@@ -64,7 +64,7 @@ ros2 run nov_fij_draw_logo draw_logo
 ``` mermaid
 graph TD;
 
-draw([ /draw_node]):::red --> cmd_vel[ /cmd_vel<br/>geometry_msgs/Twist]:::light --> turtle([ /turtlesim]):::red
+draw([ /draw_logo]):::red --> cmd_vel[ /cmd_vel<br/>geometry_msgs/Twist]:::light --> turtle([ /turtlesim]):::red
 draw --> teleport[/ /teleport_absolute<br/>turtlesim/srv/TeleportAbsolute /]:::dark --> turtle
 draw --> set_pen[/ /set_pen<br/>turtlesim/srv/SetPen /]:::dark --> turtle
 draw --> kill[/ /kill<br/>turtlesim/srv/Kill /]:::dark --> turtle
